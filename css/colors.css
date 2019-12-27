@@ -1,0 +1,104 @@
+/*
+    COLORS
+
+    Stuff that has to do with colors, either foreground or background.
+
+    The colors listed here are based off Microsoft's Fluent Design System at `
+*/
+
+:root {
+    /* Neutrals */
+
+    /* Contrast with white for readability */
+    --black: #000;
+    --gray220: #11100f;
+    --gray210: #161514;
+    --gray200: #1b1a19;
+    --gray190: #201f1e;
+    --gray180: #252423;
+    --gray170: #292827;
+    --gray160: #323130;
+    --gray150: #3b3a39;
+    --gray140: #484644;
+    --gray130: #605e5c;
+    --gray120: #797775;
+    /* Contrast with black for readability */
+    --gray110: #8a8886;
+    --gray100: #979593;
+    --gray90: #a19f9d;
+    --gray80: #b3b0ad;
+    --gray70: #bebbb8;
+    --gray60: #c8c6c4;
+    --gray50: #d2d0ce;
+    --gray40: #e1dfdd;
+    --gray30: #edebe9;
+    --gray20: #f3f2f1;
+    --gray10: #faf9f8;
+    --white: #fff;
+
+    --red20: #a4262c;
+    --red10: #d13438;
+}
+
+/*
+    HEADER
+*/
+
+.header {
+    background-color: var(--gray20);
+}
+
+.header > * {
+    color: var(--gray150);
+}
+
+.title, 
+.navigation-list, 
+.navigation-item, 
+.navigation-link {
+    color: var(--gray220);
+}
+
+.title-link {
+    color: var(--red20);
+}
+
+.title-link:hover {
+    color: var(--red10);
+}
+
+.navigation-link:hover {
+    color: var(--gray120);
+}
+
+/*
+    MAIN
+*/
+
+.post-link {
+    color: var(--red20);
+}
+
+.post-link:hover {
+    color: var(--red10);
+}
+
+/*
+    FOOTER
+*/
+
+.footer {
+    background-color: var(--gray220);
+}
+
+.footer-paragraph {
+    color: var(--white);
+}
+
+.footer-link {
+    color: var(--gray110);
+}
+
+.footer-link:hover {
+    color: var(--gray10);
+}

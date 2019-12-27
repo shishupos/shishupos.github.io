@@ -1,0 +1,87 @@
+/* 
+    LAYOUT
+
+    Stuff that has to do with the general layout of the page itself.
+
+    The method of laying out the page this way is first described by Tyler Sticka at `https://cloudfour.com/thinks/breaking-out-with-css-grid-layout/` and further elaborated on by Rachel Andrew at `https://rachelandrew.co.uk/archives/2017/06/01/breaking-out-with-css-grid-explained/`.
+
+    It allows to have grid columns while being able to make the grid's children expand to the edges of the page without having to use too many `div` elements.
+*/
+
+/* 
+    Header
+*/
+.header {
+    display: grid;
+    grid-auto-rows: minmax(1rem, auto);     /* Rows: No explicit rows are defined, so they are created by adding children directly to the markup as needed */
+    grid-template-columns: 
+        [page-start] minmax(0.5rem, 1fr)    /* Column 1: The start of the page */
+        [header-start] minmax(0, 40em)      /* Column 2: The start of `.header`*/
+        [header-end] minmax(0.5rem, 1fr)    /* Column 3: The end of `.header` */
+        [page-end];                         /* Column 4: The end of the page */
+}
+
+.header > * {
+    grid-column: header; /* All the direct children of `.header` are assigned to columns `[header-start]` and `[header-end]`; rows are assigned implicitly */
+}
+
+/* 
+    Main
+*/
+.main {
+    display: grid;
+    grid-auto-rows: minmax(1rem, auto);     /* Rows: No explicit rows are defined, so they are created by adding children directly to the markup as needed */
+    grid-template-columns: 
+        [page-start] minmax(0.5rem, 1fr)    /* Column 1: The start of the page */
+        [main-start] minmax(0, 40em)        /* Column 2: The start of `.main` */
+        [main-end] minmax(0.5rem, 1fr)      /* Column 3: The end of `.main` */
+        [page-end];                         /* Column 4: The end of the page */
+
+}
+
+.main > * {
+    grid-column: main; /* All the direct children of `.main` are assigned to columns `[main-start]` and `[main-end]`; rows are assigned implicitly */
+}
+
+/*
+        Full-bleed image
+*/
+
+.main > .bleed {
+  grid-column: page;
+}
+
+/*
+    Sidebar
+*/
+
+.sidebar {
+    display: grid;
+    grid-auto-rows: minmax(1rem, auto);     /* Rows: No explicit rows are defined, so they are created by adding children directly to the markup as needed */
+    grid-template-columns: 
+        [page-start] minmax(0.5rem, 1fr)
+        [sidebar-start] minmax(0, 40em)
+        [sidebar-end] minmax(0.5rem, 1fr)
+        [page-end];
+}
+
+.sidebar > * {
+    grid-column: sidebar; /* All the direct children of `.footer` are assigned to columns `[footer-start]` and `[footer-end]`; rows are assigned implicitly */
+}
+
+/* 
+    Footer
+*/
+.footer {
+    display: grid;
+    grid-auto-rows: minmax(1rem, auto);     /* Rows: No explicit rows are defined, so they are created by adding children directly to the markup as needed */
+    grid-template-columns: 
+        [page-start] minmax(0.5rem, 1fr)
+        [footer-start] minmax(0, 40em)
+        [footer-end] minmax(0.5rem, 1fr)
+        [page-end];
+}
+
+.footer > * {
+    grid-column: footer; /* All the direct children of `.footer` are assigned to columns `[footer-start]` and `[footer-end]`; rows are assigned implicitly */
+}

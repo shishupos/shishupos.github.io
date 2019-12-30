@@ -19,15 +19,34 @@
             <ul class="navigation-list">
                 <li class="navigation-item"><a class="navigation-link" href="index.html">Blog</a></li>
                 <li class="navigation-item"><a class="navigation-link" href="about.html">About</a></li>
+                <li>
+                    <!-- The W3C spec doesn't allow `a` elements inside `button` elements and vice-versa, so I wrapped it around a `form` with an `action` attribute-->
+                    <form class="navigation-item navigation-form" action="mailto:egawa84@outlook.com">
+                        <button class="navigation-button">Contact</button>
+                    </form>
+                </li>
             </ul>
         </nav>
+
     </header>
     <main class="main">
-        <p>A webpage to showcase HTML and CSS concepts learned through Udacity's front-end nanodegree.</p>
+        <article class="card">
+            <div class=card-image-wrapper>
+                <figure class="card-figure">
+                    <img class="card-image" src="img/fiber-optics.jpg" alt="Fiber optics glowing">
+                    <figcaption class="card-caption">A picture showing fiber optics.</figcaption>
+                </figure>
+            </div>
+            <h2 class="card-heading">Welcome to Project #1</h2>
+            <p class="card-paragraph">A webpage to showcase HTML and CSS concepts learned through Udacity's front-end nanodegree.</p>
+            <div class="card-flex-item">
+                <a class="card-link" href="#post-1">Keep reading</a>
+            </div>
+        </article>
         <article class="post">
             <img class="post-image" src="img/woman-on-top-of-mountain.jpg" alt="Woman doing yoga pose on top of mountain">
             <div class="post-wrapper">
-                <h2 class="post-heading">Pow pow poaching avie spread eagle, stomp trail swag face plant steed</h2>
+                <h2 class="post-heading" id="post-1">Pow pow poaching avie spread eagle, stomp trail swag face plant steed</h2>
                 <p class="post-byline">December 25, 2019</p>
                 <p class="post-paragraph">Line chain ring pipe gondy death cookies chillax flowy noodle grind ripper skid lid corduroy over the bars 180. Grunt bunny slope switch twister. Butter skid lid trail swag grind line grind laps whip. First tracks cruiser bail bear trap Whistler. Death cookies carbon rig newschooler hurl carcass, reverse camber pow bomb crunchy greasy back country cornice huck 180 bunny slope. Punter skid ripper, fatty shred ride beater butter table top apres endo.</p>
                 <a class="post-link" href="blog-post-1.html">Read more</a>
@@ -51,6 +70,23 @@
                 <a class="post-link" href="blog-post-3.html">Read more</a>
             </div>
         </article>
+        <aside class="sidebar">
+            <h2>Share this</h2>
+            <ul class="share-list">
+                <!-- Non-functional for the moment, just takes user to social site's home page-->
+                <li class="share-item">
+                    <a class="share-link" href="https://www.twitter.com/"><img src="img/twitter-32.png" alt="Share on Twitter"></a>
+                </li>
+                <li class="share-item">
+                    <a class="share-link" href="https://www.facebook.com/"><img src="img/facebook-32.png"
+                            alt="Share on Facebook"></a>
+                </li>
+                <li class="share-item">
+                    <a class="share-link" href="https://www.linkedin.com/"><img src="img/linkedin-32.png"
+                            alt="Share on Twitter"></a>
+                </li>
+            </ul>
+        </aside>
     </main>
     <footer class="footer">
         <p class="footer-paragraph">&copy; 2019 None. No license for now, but probably will go with <a class="footer-link" href="https://opensource.org/licenses/MIT">MIT</a> in the future.</p>

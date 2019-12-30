@@ -17,17 +17,6 @@
     display: flex;
     -ms-flex-direction: row;
     flex-direction: row;
-    justify-self: center;
-    align-self: center;
-    margin: 0;
-    padding-left: 0;
-    list-style-type: none;
-}
-
-.navigation-list {
-    display: flex;
-    -ms-flex-direction: row;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     margin: 1rem;
@@ -36,21 +25,29 @@
 }
 
 .navigation-item {
-    display: inline-block;
+    justify-content: center;
+    align-items: center;
 }
 
 .title-link, 
 .navigation-link {
-    display: inline-block;
     margin: 0.5rem;
     padding: 0.5rem;
+}
+
+.title-link, 
+.navigation-link, 
+.navigation-button {
+    display: inline-block;
     text-decoration: none;
     text-decoration-line: none;
     text-transform: uppercase;
 }
 
-.title-link, 
-.navigation-link, 
+.navigation-button {
+    padding: 0.5rem;
+}
+
 .post-link {
     padding: 0.5rem;
     text-decoration: none;
@@ -58,9 +55,58 @@
     text-transform: uppercase;
 }
 
+.navigation-button {
+    padding-right: 1.75rem;
+    padding-left: 1.75rem;
+    border-radius: 2rem;
+}
+
 /*
     MAIN
 */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border: 0;
+    border-radius: 1rem;
+    margin: 2.5rem;
+}
+
+.card-figure {
+    margin: 0;
+}
+
+.card-image {
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+.card-caption {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    font-style: italic;
+}
+
+.card-heading, 
+.card-paragraph {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.card-flex-item {
+    justify-content: center;
+    align-self: center;
+}
+
+.card-link {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
 
 .post-wrapper {
     margin: 1rem;
@@ -71,9 +117,10 @@
     align-items: center;
 }
 
+.card-image, 
 .post-image {
     max-width: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .post-heading {
@@ -107,6 +154,36 @@
 .profile-paragraph {
     line-height: 1.78;
     text-align: center;
+}
+
+/*
+    SHARING LINKS
+*/
+
+.share-list {
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.share-item {
+    justify-content: center;
+    align-items: center;
+}
+
+.share-link {
+    display: block;
+    margin: 1rem;
+    padding: 1rem;
+    vertical-align: middle;
+    text-decoration: none;
+    text-decoration-line: none;
+    text-transform: uppercase;
 }
 
 /*

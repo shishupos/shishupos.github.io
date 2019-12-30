@@ -55,9 +55,31 @@
 .title, 
 .navigation-list, 
 .navigation-item, 
-.navigation-link {
+.navigation-link, 
+.navigation-button,
+.share-list,
+.share-item,
+.share-link {
     color: var(--gray220);
 }
+
+.navigation-link:hover,
+.share-link:hover {
+    color: var(--gray120);
+}
+
+.navigation-button {
+    border: 1px solid var(--red20);
+    background-color: var(--red20);
+    color: var(--gray10);
+}
+
+.navigation-button:hover {
+    border: 1px solid var(--red10);
+    background-color: var(--red10);
+    color: var(--white);
+}
+
 
 .title-link {
     color: var(--red20);
@@ -67,13 +89,25 @@
     color: var(--red10);
 }
 
-.navigation-link:hover {
-    color: var(--gray120);
-}
+
 
 /*
     MAIN
 */
+
+.card {
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+
+}
+
+.card-link {
+    text-decoration: none;
+    color: var(--red10);
+}
+
+.card-link:hover {
+    color: var(--red20);
+}
 
 .post-link {
     color: var(--red20);
